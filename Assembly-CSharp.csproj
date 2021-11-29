@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0b43c25d-c772-5f57-05ae-7003fbe67b1a}</ProjectGuid>
+    <ProjectGuid>{25526358-c8be-c05f-cea9-981fd7037083}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -41,40 +41,43 @@
      <Compile Include="Assets\_Scripts\Obstacle\Ice\IceObstacleSpwaner.cs" />
      <Compile Include="Assets\_Scripts\Controller\CameraControllerTest.cs" />
      <Compile Include="Assets\_Scripts\Lobby\LobbyMainPanel.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Desert\MovePharaoh.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
      <Compile Include="Assets\_Scripts\Urachacha.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Space\SpaceManager.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Ice\IceObject.cs" />
      <Compile Include="Assets\_Scripts\Obstacle\Obstacle.cs" />
      <Compile Include="Assets\_Scripts\Controller\PlayerConrollerTest.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Lava\LavaObstacleSpwaner.cs" />
      <Compile Include="Assets\_Scripts\Controller\PlayerAnimatorManager.cs" />
      <Compile Include="Assets\_Scripts\Obstacle\Castle\CastleObstacleSpwaner.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Space\AsteroidRotate.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Desert\MoveCactus.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Space\JumpPlatform.cs" />
      <Compile Include="Assets\_Scripts\Obstacle\Castle\Knight.cs" />
      <Compile Include="Assets\_Scripts\PlayFabManager.cs" />
      <Compile Include="Assets\_Scripts\Controller\PlayerUI.cs" />
      <Compile Include="Assets\_Scripts\Controller\PlayerManager.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
      <Compile Include="Assets\_Scripts\Lobby\LobbyTopPanel.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Jungle\MoveStoneHead.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
      <Compile Include="Assets\_Scripts\Controller\CameraController1.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\WarningZone.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Ice\IcicleSpawner.cs" />
      <Compile Include="Assets\_Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
      <Compile Include="Assets\_Scripts\Lobby\PlayerListEntry.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Desert\MoveCactus.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Jungle\MoveStoneHead.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Ice\SnowBallSpwaner.cs" />
      <Compile Include="Assets\_Scripts\Obstacle\Jungle\Boomerang.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Ice\IceObject.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Ice\IcicleSpawner.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Desert\MovePharaoh.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\WarningZone.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Space\JumpPlatform.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Lava\LavaObstacleSpwaner.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Space\SpaceManager.cs" />
-     <Compile Include="Assets\_Scripts\Obstacle\Space\AsteroidRotate.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\WarningZoneDestroy.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\AreaCheck.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\Ice\SnowBallSpwaner.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\StartCount.cs" />
      <None Include="Assets\_Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\_Photon\PhotonLibs\changes-library.txt" />
      <None Include="Assets\_Photon\PhotonUnityNetworking\readme.txt" />
@@ -303,10 +306,10 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Assets\_Photon\PhotonLibs\Photon3Unity3D.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Assets\_Photon\PhotonLibs\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Assets\_Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Assets\_Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -654,91 +657,91 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{ff8fd8d6-2ce0-cdaa-cbca-babc114de1fc}</Project>
+      <Project>{86363b53-00e1-6cb6-0256-f3c184230d9e}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{5b4cafe8-d399-9267-c760-40f35b50f66e}</Project>
+      <Project>{df92ea0b-4e3b-83b4-4b92-a5b9a46541de}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PlayFabSDKEditor.csproj">
-      <Project>{41babd38-ee90-7b3c-6e17-dad8298cb3e1}</Project>
+      <Project>{dc61f63a-ea63-d80d-56dd-593fcf174195}</Project>
       <Name>PlayFabSDKEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PlayFabEditorExtensions.csproj">
-      <Project>{c26dc4f1-f8a1-fbec-b46c-3bedc508c76c}</Project>
+      <Project>{66b027ce-67e9-8074-3960-13fcd7c4c907}</Project>
       <Name>PlayFabEditorExtensions</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{e180411d-2934-d13d-2965-27e7c2cfd998}</Project>
+      <Project>{087c994c-763e-caac-e128-b19e0bf97174}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
     <ProjectReference Include="PlayFab.csproj">
-      <Project>{9bcd7ac2-6436-fcc1-7df1-61b314a7b4ec}</Project>
+      <Project>{66dacebf-e049-0bdc-7b73-b92b400be86f}</Project>
       <Name>PlayFab</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonWebSocket.csproj">
-      <Project>{f4d1f232-f5c6-064d-6655-d43b3fb97695}</Project>
+      <Project>{40f0d7c3-429b-64e0-f1fa-8f4459a3f9dc}</Project>
       <Name>PhotonWebSocket</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{72aebdd0-3eb6-2424-64ac-6c5b72d8b7b6}</Project>
+      <Project>{33cb2741-b5b9-cea9-2356-33e76de8d1d1}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{b57d9d97-7f85-508d-cf0f-11e761e34516}</Project>
+      <Project>{3fa5467f-5dc7-44e4-9cd6-73979f33785b}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{556c0e2e-010f-beb2-6e9c-538fe579cc6e}</Project>
+      <Project>{45efcbc1-2020-4cca-fc3c-64c7eda435da}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{319c2325-057a-e234-9e81-959754d3f8c5}</Project>
+      <Project>{9e9e36ab-7864-7ecd-39e2-d2d25f32d817}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{edc00793-6cfa-96de-0456-c930abb1a1ad}</Project>
+      <Project>{b8d4dd4d-1065-db7f-e8dd-2e72e2dfdcd9}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{fc6b6065-d9f2-9cb2-916d-aa4cf053d7b5}</Project>
+      <Project>{d30ed02a-43dd-2563-2c98-acd5823fdb47}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{50faac3b-574a-27fd-9471-28d10898f020}</Project>
+      <Project>{5a179550-7615-f33b-9e3a-0de84e0577b0}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>

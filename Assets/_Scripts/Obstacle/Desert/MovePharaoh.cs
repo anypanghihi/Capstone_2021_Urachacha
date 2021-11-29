@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MovePharaoh : MonoBehaviour
 {
-    float widthMax = -41.0f;  // ¿òÁ÷ÀÏ À§Ä¡ ÃÖ´ñ°ª
-    float widthMin = -65.5f;  // ÃÖ¼Ú°ª
+    float widthMax = -41.0f;  // ì›€ì§ì¼ ìœ„ì¹˜ ìµœëŒ“ê°’
+    float widthMin = -65.5f;  // ìµœì†Ÿê°’
 
-    float currentX;  // ÇöÀç À§Ä¡
-    float direction = 20.0f;  // ¹æÇâÀÌÀÚ ¼Óµµ
+    float currentX;  // í˜„ì¬ ìœ„ì¹˜
+    float direction = 20.0f;  // ë°©í–¥ì´ì ì†ë„
 
     void Start()
     {
-        currentX = transform.localPosition.x;  // ½ÃÀÛÇÒ ¶§ ±âº»ÀûÀ¸·Î ³õ¿©ÀÖ´Â À§Ä¡¸¦ ÇöÀç À§Ä¡·Î
+        currentX = transform.localPosition.x;  // ì‹œì‘í•  ë•Œ ê¸°ë³¸ì ìœ¼ë¡œ ë†“ì—¬ìˆëŠ” ìœ„ì¹˜ë¥¼ í˜„ì¬ ìœ„ì¹˜ë¡œ
 
         RandDirection();
         StartCoroutine(Move());
@@ -42,7 +42,7 @@ public class MovePharaoh : MonoBehaviour
         }
     }
 
-    // ½ÃÀÛÇÏ¸é ·£´ıÀ¸·Î ¼Óµµ °áÁ¤
+    // ì‹œì‘í•˜ë©´ ëœë¤ìœ¼ë¡œ ì†ë„ ê²°ì •
     public void RandDirection()
     {
         int rand = Random.Range(0, 3);

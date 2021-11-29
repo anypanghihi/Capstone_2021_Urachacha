@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class Knight : MonoBehaviour
 {
-    [SerializeField] private float speed;    
+    [SerializeField] private float direction;  // 방향이자 속도
     [SerializeField] private float destroyTime;
-
-    public GameObject player;
-    
-    private Rigidbody knightRigidbody;
-    private Rigidbody playerRigidbody;
+    float currentZ;  // 현재 위치
 
     void Start()
     {
-        knightRigidbody = GetComponent<Rigidbody>();
-        playerRigidbody = GetComponent<Rigidbody>();
+        currentZ = transform.localPosition.z;
+        StartCoroutine(MoveKnight());
         Destroy(this.gameObject, destroyTime);
     }
 
-    void Update()
+    IEnumerator MoveKnight()
     {
-        knightRigidbody.AddForce(0, 0, -speed * Time.deltaTime);       
-        
-    }
+        while (true)
+        {
+            currentZ += Time.deltaTime * direction;
 
-    private void OnCollisionStay(Collision other) {
-        if(other.collider.tag == "Player"){
-            playerRigidbody.AddForce(new Vector3(0,0,-350));
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, currentZ);
+
+            yield return null;
         }
     }
 }

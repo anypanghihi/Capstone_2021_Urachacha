@@ -10,26 +10,19 @@ public class WarningZone : MonoBehaviour
     void Start()
     {
         obstacleWarning();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }   
+    } 
 
     void obstacleWarning()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -transform.up, out hit))
         {
-            Vector3 warningPos = new Vector3(hit.transform.position.x,hit.transform.position.y+0.57f,hit.transform.position.z);
+            Vector3 warningPos = new Vector3(hit.transform.position.x,hit.transform.position.y+0.58f,hit.transform.position.z);
             Instantiate(warningZone, warningPos, Quaternion.identity);
         }
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log(other.collider.tag);
         if(other.collider.tag == "WarningZone"){
             Destroy(other.collider.gameObject);
         }

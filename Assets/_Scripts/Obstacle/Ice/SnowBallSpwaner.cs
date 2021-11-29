@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnowBallSpwaner : MonoBehaviour
 {
-    [Header ("SnowBall")]
+    [Header("SnowBall")]
     [SerializeField] private GameObject snowBallPrefab;
     [SerializeField] private GameObject snowParent;
     [SerializeField] private Transform snowBallZone1;

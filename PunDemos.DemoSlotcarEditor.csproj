@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{fc6b6065-d9f2-9cb2-916d-aa4cf053d7b5}</ProjectGuid>
+    <ProjectGuid>{d30ed02a-43dd-2563-2c98-acd5823fdb47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PunDemos.DemoSlotcarEditor</AssemblyName>
@@ -269,25 +269,25 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Assets\_Photon\PhotonLibs\Photon3Unity3D.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Assets\_Photon\PhotonLibs\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Assets\_Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Assets\_Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -638,21 +638,21 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\으랏차차_백업4_1라운드캐릭터머지\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+        <HintPath>C:\Users\Game\Desktop\test234\Capstone_2021_Urachacha\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{e180411d-2934-d13d-2965-27e7c2cfd998}</Project>
+      <Project>{087c994c-763e-caac-e128-b19e0bf97174}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
   </ItemGroup>

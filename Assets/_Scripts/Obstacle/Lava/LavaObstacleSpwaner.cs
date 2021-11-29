@@ -27,7 +27,7 @@ public class LavaObstacleSpwaner : MonoBehaviour
         while (true)
         {
             float randX = Random.Range(lavaZone[0].transform.position.x, lavaZone[1].transform.position.x);
-            float randZ = Random.Range(lavaZone[1].transform.position.z, lavaZone[2].transform.position.z);
+            float randZ = Random.Range(lavaZone[0].transform.position.z, lavaZone[1].transform.position.z);
             Vector3 spawnPos = new Vector3(randX, 10f, randZ);
 
             GameObject lava = Instantiate(lavaPrefab, spawnPos, Quaternion.identity) as GameObject;

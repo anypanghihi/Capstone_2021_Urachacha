@@ -24,6 +24,13 @@ namespace Photon.Pun.Urachacha
 
         [Header("Selection Panel")]
         public GameObject SelectionPanel;
+        public GameObject GameModeSelectionPanel;
+        public GameObject MyImformationPanel;
+        public GameObject ShopPanel;
+        public GameObject CustomizingPanel;
+        public GameObject SettingPanel;
+        
+        public Text PlayerNameText;
 
         [Header("Join Random Room Panel")]
         public GameObject JoinRandomRoomPanel;
@@ -42,7 +49,7 @@ namespace Photon.Pun.Urachacha
         {
             PhotonNetwork.AutomaticallySyncScene = true;
             
-            PlayerNameInput.text = "Player " + Random.Range(1000, 10000);
+            PlayerNameInput.text = "Player" + Random.Range(1000, 10000);
         }
 
         #endregion
@@ -185,6 +192,7 @@ namespace Photon.Pun.Urachacha
         public void OnJoinRandomRoomButtonClicked()
         {
             SetActivePanel(JoinRandomRoomPanel.name);
+            ClosePanel(GameModeSelectionPanel);
 
             PhotonNetwork.JoinRandomRoom();
         }
@@ -225,7 +233,8 @@ namespace Photon.Pun.Urachacha
 
             if (!playerName.Equals(""))
             {
-                PhotonNetwork.LocalPlayer.NickName = playerName;
+                PlayerNameText.text = PhotonNetwork.LocalPlayer.NickName = playerName;
+                //playerName님 환영합니다와 같은 문구 출력
                 PhotonNetwork.ConnectUsingSettings();
             }
             else
@@ -234,13 +243,38 @@ namespace Photon.Pun.Urachacha
             }
         }
 
+        public void OnMemberLoginButtonClicked()
+        {
+            //플레이팹에서 닉네임 불러와서 할당할 수 있게
+            string playerName = PlayerNameInput.text;
+
+            if (!playerName.Equals(""))
+            {
+                PlayerNameText.text = PhotonNetwork.LocalPlayer.NickName = playerName;
+                PhotonNetwork.ConnectUsingSettings();
+            }
+            else
+            {
+                Debug.LogError("Member is invalid.");
+            }
+        }
+
         public void OnStartGameButtonClicked()
         {
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
 
-            PhotonNetwork.LoadLevel("1Round");
-            
+            PhotonNetwork.LoadLevel("1Round");       
+        }
+
+        public void OnPanelSelectButtonClicked(GameObject panel)
+        {
+            panel.SetActive(panel);
+        }
+
+        public void ClosePanel(GameObject panel)
+        {
+            panel.SetActive(false);
         }
 
         #endregion
