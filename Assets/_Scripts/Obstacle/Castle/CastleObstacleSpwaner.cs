@@ -39,7 +39,7 @@ public class CastleObstacleSpwaner : MonoBehaviour
             float randZ = Random.Range(arrowZone[0].transform.position.z, arrowZone[1].transform.position.z);
             Vector3 spawnPos = new Vector3(randX, 10f, randZ);
 
-            GameObject arrow = Instantiate(arrowPrefab, spawnPos, Quaternion.identity) as GameObject;
+            GameObject arrow = Instantiate(arrowPrefab, spawnPos, Quaternion.Euler(90, 0, 0)) as GameObject;
             arrow.transform.SetParent(arrowParent.transform, true);
 
             yield return new WaitForSeconds(delaytime);
@@ -54,7 +54,7 @@ public class CastleObstacleSpwaner : MonoBehaviour
             float randZ = Random.Range(rockZone[0].transform.position.z, rockZone[1].transform.position.z);
             Vector3 spawnPos = new Vector3(randX, 10f, randZ);
 
-            GameObject rock = Instantiate(rockPrefab, spawnPos, Quaternion.identity) as GameObject;
+            GameObject rock = Instantiate(rockPrefab, spawnPos, Quaternion.Euler(90, 0, 0)) as GameObject;
             rock.transform.SetParent(rockParent.transform, true);
 
             yield return new WaitForSeconds(delaytime);

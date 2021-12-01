@@ -6,7 +6,7 @@ public class IceObject : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.collider.tag);
+        //Debug.Log(other.collider.tag);
         if (other.collider.tag == "DeadIceObj")
         {
             Destroy(gameObject);
