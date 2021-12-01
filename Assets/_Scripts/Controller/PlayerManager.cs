@@ -28,6 +28,7 @@ namespace Photon.Pun.Urachacha
         [SerializeField] private float jumpSpeed;
         [SerializeField] private float gravity;
         [SerializeField] private bool canJump;
+        [SerializeField] private bool OnJumpPlatform;
 
         [SerializeField] private bool isGrounded;
         [SerializeField] private float groundCheckDistance;
@@ -87,6 +88,7 @@ namespace Photon.Pun.Urachacha
                 gameObject.name = "Player";
 
                 Move();
+                UpdateUI();
 
                 if (this.Gauge <= 0f)
                 {
@@ -103,6 +105,16 @@ namespace Photon.Pun.Urachacha
                 transform.position = Vector3.Lerp(transform.position, remotePos, 10 * Time.deltaTime);
                 transform.rotation = Quaternion.Lerp(transform.rotation, remoteRot, 10 * Time.deltaTime);
                 cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, remoteCamRot, 10 * Time.deltaTime);
+            }
+        }
+
+        public void UpdateUI()
+        {
+            if (LocalPlayerInstance != null && UIManager.instance != null)
+            {
+                UIManager.instance.UpdateMissionText(Urachacha.FIRST_ROUND_MISSION);
+                UIManager.instance.UpdatePlayerCountText(ControlManager.instance.finishedPlayerCount, ControlManager.instance.maxPlayerCount);
+                UIManager.instance.UpdateCountDown(ControlManager.instance.readyCountSecond);
             }
         }
 
@@ -127,11 +139,30 @@ namespace Photon.Pun.Urachacha
                 return;
             }
 
-            if (other.collider.tag.Equals("Obstacle"))
+            // if (other.collider.tag.Equals("Obstacle"))
+            // {
+            //     Gauge -= 0.0005f;
+            //     Debug.Log(Gauge);
+            // }
+        }
+
+        private void OnControllerColliderHit(ControllerColliderHit hit) {
+            if (!photonView.IsMine)
             {
-                Gauge -= 0.0005f;
+                return;
+            }
+
+            OnJumpPlatform = false;
+
+            if (hit.collider.tag.Equals("Obstacle"))
+            {
+                Gauge -= 0.001f;
                 Debug.Log(Gauge);
             }
+            else if(hit.collider.tag.Equals("JumpPlatform")){
+                OnJumpPlatform = true;
+            }
+            
         }
 
         public void OnTriggerEnter(Collider other)
@@ -183,10 +214,16 @@ namespace Photon.Pun.Urachacha
             {
                 anim.SetBool("isGrounded", true);
 
-                if (Input.GetKeyDown(KeyCode.Space) && canJump)
+                if(Input.GetKeyDown(KeyCode.Space) && canJump && OnJumpPlatform)
                 {
                     canJump = false;
-
+                    jumpSpeed = 15;
+                    Jump();
+                }
+                else if (Input.GetKeyDown(KeyCode.Space) && canJump)
+                {
+                    canJump = false;
+                    jumpSpeed = 4;
                     Jump();           
                 }   
             } 

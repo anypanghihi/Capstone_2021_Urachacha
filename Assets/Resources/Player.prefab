@@ -1744,6 +1744,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gauge: 1
   playerUiPrefab: {fileID: 1173716494933993629, guid: 33c406c6b8abacd4e8113353b8182d9e, type: 3}
+  moveSpeed: 0
+  jumpSpeed: 0
+  gravity: 0
+  canJump: 0
+  isGrounded: 0
+  groundCheckDistance: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &6621819718691099442
 MonoBehaviour:
   m_ObjectHideFlags: 0

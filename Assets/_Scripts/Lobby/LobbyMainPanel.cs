@@ -264,7 +264,10 @@ namespace Photon.Pun.Urachacha
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
 
-            PhotonNetwork.LoadLevel("1Round");       
+            int count = PhotonNetwork.PlayerList.Length;
+            ControlManager.instance.maxPlayerCount = count;
+
+            PhotonNetwork.LoadLevel("1Round"); 
         }
 
         public void OnPanelSelectButtonClicked(GameObject panel)

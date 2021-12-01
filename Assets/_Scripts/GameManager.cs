@@ -14,11 +14,15 @@ namespace Photon.Pun.Urachacha
 
 		static public GameManager Instance;
 
+		public float count;
+
 		#endregion
 
 		#region Private Fields
 
 		private GameObject instance;
+
+		private bool counted = true;
 
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
@@ -65,20 +69,57 @@ namespace Photon.Pun.Urachacha
 
 		void Update()
 		{
+			if (GameObject.FindGameObjectsWithTag("Player").Length == ControlManager.instance.maxPlayerCount && counted)
+			{		
+				StartCounting();
+
+				//카운트 세고 벽 없애기
+				//전체 비추는 카메라 비활성화하기
+				//ControlManager 포톤으로 변수 동기화 해야함 or UIManager RPC로 업데이트 해야함 (둘 중 하나인건 Debug 해서 어떤 함수가 작동하는지 알아보고 정하기)
+			}
+
 			// "back" button of phone equals "Escape". quit app if that's pressed
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				QuitApplication();
+				PuaseApplication();
 			}
 		}
+
+		void Awake() 
+        {
+            //DontDestroyOnLoad(gameObject);
+        }
 
         #endregion
 
 		#region Public Methods
 
-		public void QuitApplication()
+		public void PuaseApplication()
 		{
-			Application.Quit();
+			//
+		}
+
+		public void StartCounting()
+		{
+			count -= Time.deltaTime;
+			ControlManager.instance.readyCountSecond = string.Format("{0:f0}", count);
+
+			if (count <= 0 && counted)
+			{
+				ControlManager.instance.readyCountSecond = " ";
+				counted = false;
+
+				StartRunning();
+			}
+		}
+
+		public void StartRunning()
+		{
+			GameObject cam = GameObject.Find("Starting Camera");
+			GameObject startingWall = GameObject.Find("Starting Wall");
+			
+			cam.SetActive(false);
+			startingWall.SetActive(false);
 		}
 
 		#endregion

@@ -7,6 +7,8 @@ namespace Photon.Pun.Urachacha
         public const string PLAYER_READY = "IsPlayerReady";
         public const string PLAYER_LOADED_LEVEL = "PlayerLoadedLevel";
 
+        public const string FIRST_ROUND_MISSION = "목표지점에 먼저 도달해라";
+
         public static Color GetColor(int colorChoice)
         {
             switch (colorChoice)

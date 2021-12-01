@@ -252,6 +252,7 @@ MonoBehaviour:
   jumpSpeed: 4
   gravity: 9.81
   canJump: 0
+  OnJumpPlatform: 0
   isGrounded: 1
   groundCheckDistance: 0.1
   groundMask:
