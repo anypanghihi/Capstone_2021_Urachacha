@@ -76,6 +76,7 @@
      <Compile Include="Assets\_Scripts\Lobby\PlayerListEntry.cs" />
      <Compile Include="Assets\_Scripts\Obstacle\Jungle\Boomerang.cs" />
      <Compile Include="Assets\_Scripts\Obstacle\WarningZoneDestroy.cs" />
+     <Compile Include="Assets\_Scripts\Obstacle\WarningZoneIce.cs" />
      <None Include="Assets\_Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\_Photon\PhotonLibs\changes-library.txt" />
      <None Include="Assets\_Photon\PhotonUnityNetworking\readme.txt" />
