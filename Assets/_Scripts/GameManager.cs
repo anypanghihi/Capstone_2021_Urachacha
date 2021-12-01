@@ -106,7 +106,8 @@ namespace Photon.Pun.Urachacha
 
 			if (count <= 0 && counted)
 			{
-				ControlManager.instance.readyCountSecond = " ";
+				ControlManager.instance.readyCountSecond = "모든 플레이어가 접속할 때 까지 잠시만 기다려주세요";
+				UIManager.instance.ReadyCountDisplay.SetActive(false);
 				counted = false;
 
 				StartRunning();

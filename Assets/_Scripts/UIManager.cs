@@ -24,10 +24,14 @@ namespace Photon.Pun.Urachacha
 
         private static UIManager m_instance;
 
-
+        public GameObject MissionDisplay;
         public Text missionText;
+
+        public GameObject PlayerCountDisplay;
         public Text playerCountText;
-        public Text countDownText;
+
+        public GameObject ReadyCountDisplay;
+        public Text readyCountText;
 
         public void UpdateMissionText(string curMission)
         {
@@ -36,12 +40,12 @@ namespace Photon.Pun.Urachacha
 
         public void UpdatePlayerCountText(int curPlayer, int maxPlayer)
         {
-            playerCountText.text = curPlayer + " / " + maxPlayer;
+            playerCountText.text = "인원 : \n" + curPlayer + " / " + maxPlayer;
         }
 
         public void UpdateCountDown(string count)
         {
-            countDownText.text = count;
+            readyCountText.text = count;
         }
     }
 }

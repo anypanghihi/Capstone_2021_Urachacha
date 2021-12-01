@@ -88,7 +88,7 @@ namespace Photon.Pun.Urachacha
 
         public void SetPlayerReady(bool playerReady)
         {
-            PlayerReadyButton.GetComponentInChildren<Text>().text = playerReady ? "Ready!" : "Ready?";
+            PlayerReadyButton.GetComponentInChildren<Text>().text = playerReady ? "레디!" : "레디?";
             PlayerReadyImage.enabled = playerReady;
         }
     }

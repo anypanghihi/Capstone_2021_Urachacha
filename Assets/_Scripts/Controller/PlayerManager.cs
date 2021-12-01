@@ -146,20 +146,20 @@ namespace Photon.Pun.Urachacha
             // }
         }
 
-        private void OnControllerColliderHit(ControllerColliderHit hit) {
+        private void OnControllerColliderHit(ControllerColliderHit hit) 
+        {
             if (!photonView.IsMine)
             {
                 return;
             }
-
-            OnJumpPlatform = false;
 
             if (hit.collider.tag.Equals("Obstacle"))
             {
                 Gauge -= 0.001f;
                 Debug.Log(Gauge);
             }
-            else if(hit.collider.tag.Equals("JumpPlatform")){
+            else if(hit.collider.tag.Equals("JumpPlatform"))
+            {
                 OnJumpPlatform = true;
             }
             
@@ -216,6 +216,7 @@ namespace Photon.Pun.Urachacha
 
                 if(Input.GetKeyDown(KeyCode.Space) && canJump && OnJumpPlatform)
                 {
+                    OnJumpPlatform = false;
                     canJump = false;
                     jumpSpeed = 15;
                     Jump();
