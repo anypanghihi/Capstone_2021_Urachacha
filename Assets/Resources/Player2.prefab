@@ -258,6 +258,20 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  RestartPoint:
+  - {fileID: 1867288587889702307, guid: 0715ce9fedde93a4a8b6431700176cd5, type: 3}
+  - {fileID: 3897653579234582150, guid: 64a72b9dcc47f8f45a56a46b030114a9, type: 3}
+  - {fileID: 5065989385452275521, guid: bfa441da9b4fe2a4aa983d7b8157497b, type: 3}
+  - {fileID: 7785512629345245891, guid: 2028ebb57fd6aed4a9e461d53a21a649, type: 3}
+  - {fileID: 7874101627125626648, guid: b05abf8eff3941c47a6f440116917d77, type: 3}
+  - {fileID: 579914622553448044, guid: 4f159590dd7a1c34e8164f6e6b1061a8, type: 3}
+  skyBox:
+  - {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
+  - {fileID: 2100000, guid: 5d133deeaa66ed445853e946ff25e073, type: 2}
+  - {fileID: 2100000, guid: 85cf0b004bc4a654b9e501efcce47902, type: 2}
+  - {fileID: 2100000, guid: e391f00234292cc4f935308c11cf0e54, type: 2}
+  - {fileID: 2100000, guid: 4e154bf235e41704bbd6bbc6fd6c63f6, type: 2}
+  - {fileID: 2100000, guid: f531e09e2ad2fb440b4eed7605863143, type: 2}
 --- !u!1001 &5794799849547184477
 PrefabInstance:
   m_ObjectHideFlags: 0

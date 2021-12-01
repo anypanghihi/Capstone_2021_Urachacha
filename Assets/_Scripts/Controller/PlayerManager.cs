@@ -45,6 +45,10 @@ namespace Photon.Pun.Urachacha
         Quaternion remoteRot;
         Quaternion remoteCamRot;
 
+        int Area = -1;
+        public GameObject[] RestartPoint;
+        public Material[] skyBox;
+
         #endregion
 
         #region MonoBehaviour CallBacks
@@ -170,6 +174,34 @@ namespace Photon.Pun.Urachacha
             if (!photonView.IsMine)
             {
                 return;
+            }
+
+            switch (other.gameObject.tag)
+            {
+                case "CastleArea":
+                    Area = 0;
+                    RenderSettings.skybox = skyBox[Area];
+                    break;
+                case "LavaArea":
+                    Area = 1;
+                    RenderSettings.skybox = skyBox[Area];
+                    break;
+                case "JungleArea":
+                    Area = 2;
+                    RenderSettings.skybox = skyBox[Area];
+                    break;
+                case "DesertArea":
+                    Area = 3;
+                    RenderSettings.skybox = skyBox[Area];
+                    break;
+                case "IceArea":
+                    Area = 4;
+                    RenderSettings.skybox = skyBox[Area];
+                    break;
+                case "SpaceArea":
+                    Area = 5;
+                    RenderSettings.skybox = skyBox[Area];
+                    break;
             }
         }
 
